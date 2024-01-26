@@ -2,7 +2,7 @@
 
 #define NUMPIXELS 1
 #define PIN 38
-#define DELAYVAL 500
+#define DELAYVAL 1000
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -15,15 +15,15 @@ void loop()
 {
   int i=0;
   
-  pixels.setPixelColor(i, uint32_t(pixels.Color(150, 0, 0)));
+  pixels.setPixelColor(i, uint32_t(pixels.Color(50, 0, 0)));
   pixels.show();
   delay(DELAYVAL);
 
-  pixels.setPixelColor(i, uint32_t(pixels.Color(0, 150, 0)));
+  pixels.setPixelColor(i, uint32_t(pixels.Color(0, 50, 0)));
   pixels.show();
   delay(DELAYVAL);
 
-  pixels.setPixelColor(i, uint32_t(pixels.Color(0, 0, 150)));
+  pixels.setPixelColor(i, uint32_t(pixels.Color(0, 0, 50)));
   pixels.show();
   delay(DELAYVAL);
 }
